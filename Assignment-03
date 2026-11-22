@@ -1,0 +1,57 @@
+#include <stdio.h>
+int main ()
+{
+    int NUM_1, NUM_2, RESULT, CHOICE;
+    printf("Select a number from 1 to 10 as your first number:\n");
+    scanf("%d", &NUM_1);
+
+    printf("Select a number from 1 to 10 as your second number:\n");
+    scanf("%d", &NUM_2);
+
+    printf("Select the operation of your choice from the given choices:\n");
+    printf("1. Number 1 + Number 2\n");
+    printf("2. Number 1 - Number 2\n");
+    printf("3. Number 2 - Number 1\n");
+    printf("4. Number 1 * Number 2\n");
+    printf("5. (Number 1)/(Number 2)\n");
+    printf("6. (Number 2)/(Number 1)\n");
+    scanf("%d", &CHOICE);
+
+    switch (CHOICE)
+    {
+        case 1:
+            RESULT = NUM_1 + NUM_2;
+            printf("Addition is = %d\n", RESULT);
+            break;
+
+        case 2:
+            RESULT = NUM_1 - NUM_2;
+            printf("Subtraction is = %d\n", RESULT);
+            break;
+
+        case 3:
+            RESULT = NUM_2 - NUM_1;
+            printf("Subtraction is = %d\n", RESULT);
+            break;
+
+        case 4:
+            RESULT = NUM_1 * NUM_2;
+            printf("Multiplication is = %d\n", RESULT);
+            break;
+
+        case 5:
+            RESULT = NUM_1 / NUM_2;
+            printf("Division is = %d\n", RESULT);
+            break;
+
+        case 6:
+            RESULT = NUM_2 / NUM_1;
+            printf("Division is = %d\n", RESULT);
+            break;
+
+        default:
+            printf("Invalid choice!\n");
+            break;
+    }
+    return 0;
+}
